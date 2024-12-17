@@ -70,4 +70,4 @@ The model achieves strong performance(around 85%) with only 1% labeled data(600 
 ## Conclusion
 With very low number of labeled images and using self-training, active learning, regularization, and augmentation possible to achieve promising performance.
 
-The detais are explained in medium story which you can see from [link]().
+The detais are explained in medium story which you can see from [link](https://medium.com/@a.r.amouzad.m/semi-supervised-learning-self-training-with-1-labeled-data-aeda3bfb108f).
