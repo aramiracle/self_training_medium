@@ -1,5 +1,4 @@
 import torch
-from torchvision import transforms
 from torch.utils.data import DataLoader, Subset, TensorDataset
 from tqdm import tqdm
 from loss import CustomActiveLearningLoss
@@ -84,7 +83,6 @@ class SelfTraining:
         """
         augmented_data = []
         for img in data:
-            img = transforms.ToPILImage()(img)
             if is_labeled:
                 aug_img = self.augmenter.weak_transform(img)
             else:
@@ -327,7 +325,7 @@ class SelfTraining:
             loss = self.train_on_labeled(labeled_loader, epoch)
             labeled_accuracy = self.calculate_accuracy(labeled_loader)
             
-            if epoch % 25 == 0:
+            if epoch % 200 == 0:
                 pseudo_data, pseudo_targets, pseudo_indices = self.generate_pseudo_labels(unlabeled_loader, epoch)
                 
                 self.pseudo_loader = self.update_pseudo_labels(pseudo_data, pseudo_targets)

@@ -8,7 +8,7 @@ from trainer import SelfTraining
 
 def main():
     batch_size = 1024
-    num_epochs = 1000
+    num_epochs = 2000
     learning_rate = 1e-4
     confidence_threshold = 0.95
     pseudo_weight = 0.2

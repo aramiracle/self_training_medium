@@ -22,16 +22,14 @@ class AugmentationTransforms:
     """
     def __init__(self):
         self.strong_transform = transforms.Compose([
+            transforms.ToPILImage(),
             transforms.RandomAffine(degrees=5, translate=(0.1, 0.1), scale=(0.9, 1.1)),
             transforms.ToTensor(),
         ])
 
         self.weak_transform = transforms.Compose([
+            transforms.ToPILImage(),
             transforms.RandomAffine(degrees=3, translate=(0.05, 0.05), scale=(0.95, 1.05)),
-            transforms.ToTensor(),
-        ])
-
-        self.test_transform = transforms.Compose([
             transforms.ToTensor(),
         ])
 
