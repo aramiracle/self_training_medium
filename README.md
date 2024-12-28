@@ -65,7 +65,7 @@ This custom loss function is designed for active learning scenarios, combining t
 - The loss function helps the model learn from both labeled and unlabeled data while accounting for prediction uncertainty and confidence. This is particularly useful in semi-supervised learning scenarios where labeled data is limited.
 
 ## Results
-The model achieves strong performance(around 85%) with only 1% labeled data(600 images) on MNIST dataset.
+The model achieves strong performance(around 90%) with only 1% labeled data(600 images) on MNIST dataset.
 
 ## Conclusion
 With very low number of labeled images and using self-training, active learning, regularization, and augmentation possible to achieve promising performance.
